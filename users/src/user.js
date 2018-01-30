@@ -17,6 +17,8 @@ const UserSchema = new Schema({
     type: Schema.Types.ObjectId,
     ref: 'blogPost'
   }]
+}, {
+  usePushEach: true
 });
 
 UserSchema.virtual('postCount').get(function() {

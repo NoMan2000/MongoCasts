@@ -8,6 +8,8 @@ const BlogPostSchema = new Schema({
     type: Schema.Types.ObjectId,
     ref: 'comment'
   }]
+}, {
+  usePushEach: true
 });
 
 const BlogPost = mongoose.model('blogPost', BlogPostSchema);
